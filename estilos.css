@@ -1,0 +1,138 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #faf6ef;
+  color: #31282a;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;
+  line-height: 1.2;
+}
+
+.cabecera {
+  padding: 3rem 1rem;
+  background: #ffff5b;
+  color: rgb(255, 111, 200);
+  text-align: center;
+}
+
+.cabecera h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+}
+
+.contenedor {
+  width: min(calc(100% - 2rem), 65rem);
+  margin: 2rem auto;
+}
+
+.entradas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: 1.25rem;
+}
+
+.tarjeta {
+  overflow: hidden;
+  background: rgb(255, 111, 200);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 18px #31282a18;
+}
+
+.tarjeta img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.tarjeta-texto {
+  padding: 1rem;
+}
+
+.tarjeta h3 {
+  margin-top: 0;
+}
+
+a {
+  color: #ffff5b;
+  text-underline-offset: 0.2em;
+}
+
+.entrada {
+  max-width: 43rem;
+}
+
+.entrada img {
+  display: block;
+  width: 100%;
+  max-height: 30rem;
+  object-fit: contain;
+  background: #f0e6dc;
+  border-radius: 0.75rem;
+}
+
+.cabecera {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr) 12rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-cabecera {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.menu-cabecera a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.menu-cabecera a:hover,
+.menu-cabecera a:focus-visible,
+.menu-cabecera a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .cabecera {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-cabecera {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem 1rem;
+  }
+}
+
+.boton-entradas {
+  display: inline-block;
+  padding: 0.65rem 1.1rem;
+  border-radius: 0.5rem;
+  background: rgb(255, 111, 200);
+  color: #ffff5b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.boton-entradas:hover {
+  background: #ebdfd0;
+}
+
+.boton-entradas:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
